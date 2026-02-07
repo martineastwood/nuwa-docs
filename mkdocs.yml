@@ -1,0 +1,76 @@
+site_name: Nuwa Documentation
+site_description: Central documentation for all Nuwa projects
+site_author: Nuwa
+repo_url: https://github.com/martineastwood/nuwa-build/
+repo_name: nuwa-build
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - repo
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - tables
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Nuwa Build:
+      - Overview: nuwa-build/index.md
+      - Project Structure: nuwa-build/structure.md
+      - Configuration: nuwa-build/configuration.md
+      - CLI Commands: nuwa-build/commands.md
+      - Jupyter Support: nuwa-build/jupyter.md
+      - AI Agents: nuwa-build/ai-agents.md
+      - CI/CD: nuwa-build/ci.md
+      - Troubleshooting: nuwa-build/troubleshooting.md
+  - Nuwa Build Action:
+      - Overview: nuwa-build-action/index.md
+      - Advanced Configuration: nuwa-build-action/advanced.md
+      - Platform Details: nuwa-build-action/platforms.md
+      - Publishing to PyPI: nuwa-build-action/publishing.md
+      - FAQ: nuwa-build-action/faq.md
+  - Nuwa SDK:
+      - Overview: nuwa-sdk/index.md
+      - nuwa_export Macro: nuwa-sdk/nuwa-export.md
+      - GIL Release: nuwa-sdk/gil-release.md
+      - Type Mappings: nuwa-sdk/types.md
+  - Examples:
+      - Overview: examples/index.md
+      - Featuristic: examples/featuristic/index.md
+      - Nuwa Example: examples/nuwa-example/index.md
+
+extra:
+  version:
+    provider: mkdocs
+  stylesheet:
+    - stylesheets/extra.css

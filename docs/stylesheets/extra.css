@@ -1,0 +1,63 @@
+/* Improve text readability */
+.md-typeset {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Darken text color for better contrast */
+.md-typeset,
+.md-typeset__container {
+  color: var(--md-default-fg-color);
+}
+
+/* Improve heading visibility */
+.md-typeset h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Make code blocks more readable */
+.md-typeset code {
+  font-size: 0.95em;
+  background-color: rgba(175, 184, 193, 0.2);
+}
+
+/* Make links more visible */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+}
+
+/* Improve list readability */
+.md-typeset li {
+  margin-bottom: 0.4em;
+}
+
+/* Make tables more readable */
+.md-typeset table {
+  font-size: 0.95rem;
+}
+
+/* Improve nav text visibility */
+.md-nav__item .md-nav__link {
+  font-size: 0.95rem;
+}
