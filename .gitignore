@@ -44,3 +44,4 @@ ENV/
 # MkDocs specific
 *.bak
 .cache/
+*.code-workspace

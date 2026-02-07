@@ -4,7 +4,7 @@
 
 # Welcome to Nuwa
 
-Nuwa is the complete toolkit for building Python extensions in Nim. It handles the code (SDK), the compilation (Build), and the distribution (CI/CD) so you don't have to.
+Nuwa is the open source toolkit for building Python extensions in Nim. It handles the code (SDK), the compilation (Build), and the distribution (CI/CD) so you don't have to.
 
 ## Why Nim?
 

@@ -101,6 +101,7 @@ def validate_dataframe(df, column_name):
 ```
 
 This allows you to:
+
 - Use Python to extract/prepare data
 - Pass pointers/arrays to Nim for zero-copy processing
 - Return results back to Python

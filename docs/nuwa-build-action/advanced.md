@@ -159,6 +159,7 @@ jobs:
 See the [cibuildwheel documentation](https://cibuildwheel.pypa.io/en/stable/settings/) for all available options.
 
 Common variables:
+
 - `CIBW_BUILD` - Build only these Python/OS combinations
 - `CIBW_SKIP` - Skip these Python/OS combinations
 - `CIBW_ARCHS_LINUX` - Linux architectures (x86_64, aarch64)

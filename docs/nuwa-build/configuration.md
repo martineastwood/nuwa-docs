@@ -116,6 +116,7 @@ recursive-exclude package/tests *.py
 ```
 
 **Supported commands:**
+
 - `include pattern ...` - Include files matching patterns
 - `exclude pattern ...` - Exclude files matching patterns
 - `recursive-include dir pattern ...` - Include files in directory

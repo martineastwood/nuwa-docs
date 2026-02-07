@@ -1,8 +1,9 @@
 site_name: Nuwa Documentation
 site_description: Central documentation for all Nuwa projects
 site_author: Nuwa
-repo_url: https://github.com/martineastwood/nuwa-build/
-repo_name: nuwa-build
+site_url: https://martineastwood.github.io/nuwa-docs/
+repo_url: https://github.com/martineastwood/nuwa-build
+repo_name: martineastwood/nuwa-build
 edit_uri: ""
 
 theme:
