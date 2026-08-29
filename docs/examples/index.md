@@ -12,7 +12,7 @@ Welcome to the Nuwa examples section. This collection of projects demonstrates h
 Each example is a complete, working project. To explore them:
 
 1. **Clone the example repository** or navigate to its source
-2. **Install dependencies** - Usually just `nimble install nimpy`
+2. **Install dependencies** - `nuwa develop` installs `nimble-deps` (nimpy and nuwa_sdk)
 3. **Build with Nuwa** - Run `nuwa develop` for development
 4. **Run the code** - Each example includes test files or demonstration scripts
 

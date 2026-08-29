@@ -1,9 +1,9 @@
 name: Deploy Documentation
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -21,10 +21,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Deploy to GitHub Pages
-        uses: squidfunk/mkdocs-material-action@v1
-        with:
-          config_file: mkdocs.yml
+        run: mkdocs gh-deploy --force

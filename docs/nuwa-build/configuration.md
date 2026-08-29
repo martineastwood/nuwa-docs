@@ -33,20 +33,70 @@ output-location = "auto"
 nim-flags = []
 
 # Nimble dependencies (auto-installed before build)
-nimble-deps = ["nimpy", "cligen >= 1.0.0"]
+nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.3"]
 ```
 
 ## Configuration Options
 
-| Option            | Type   | Default                   | Description                                                    |
-| ----------------- | ------ | ------------------------- | -------------------------------------------------------------- |
-| `nim-source`      | string | `"nim"`                   | Directory containing Nim source files                          |
-| `module-name`     | string | Derived from project name | Python package name                                            |
-| `lib-name`        | string | `{module_name}_lib`       | Internal compiled extension name                               |
-| `entry-point`     | string | `{lib_name}.nim`          | Main entry point file (relative to `nim-source`)               |
-| `output-location` | string | `"auto"`                  | Where to place compiled extension (`"auto"`, `"src"`, or path) |
-| `nim-flags`       | list   | `[]`                      | Additional compiler flags                                      |
-| `nimble-deps`     | list   | `[]`                      | Nimble packages to auto-install before build                   |
+| Option                  | Type   | Default                   | Description                                                    |
+| ----------------------- | ------ | ------------------------- | -------------------------------------------------------------- |
+| `nim-source`            | string | `"nim"`                   | Directory containing Nim source files                          |
+| `module-name`           | string | Derived from project name | Python package name                                            |
+| `lib-name`              | string | `{module_name}_lib`       | Internal compiled extension name                               |
+| `entry-point`           | string | `{lib_name}.nim`          | Main entry point file (relative to `nim-source`)               |
+| `output-location`       | string | `"auto"`                  | Where to place compiled extension (`"auto"`, `"src"`, or path) |
+| `nim-flags`             | list   | `[]`                      | Additional compiler flags                                      |
+| `nimble-deps`           | list   | `[]`                      | Nimble packages to auto-install before build                   |
+| `windows-static-linking` | bool   | `true`                    | Enable static linking on Windows (see below)                  |
+| `bundle-adjacent-dlls`  | bool   | `true`                    | Bundle adjacent DLL files into wheel (see below)              |
+
+## Windows Static Linking
+
+On Windows, Nuwa automatically enables static linking by default. This means the compiled extension (`.pyd`) will be statically linked against system libraries, avoiding DLL dependencies.
+
+### How It Works
+
+When `windows-static-linking` is `true` (the default):
+- On Windows only, adds `--passL:-static` to the Nim compiler flags
+- This applies when using the GCC-based compiler (not `--cc:vcc`)
+- Results in a self-contained `.pyd` file with no runtime DLL dependencies
+
+### Disabling Static Linking
+
+If you need to disable static linking on Windows:
+
+```toml
+[tool.nuwa]
+windows-static-linking = false
+```
+
+### DLL Bundling (`bundle-adjacent-dlls`)
+
+When static linking is disabled, DLL dependencies may be generated. The `bundle-adjacent-dlls` option controls whether these DLLs are bundled into the wheel.
+
+**When `bundle-adjacent-dlls` is `true`** (default):
+
+- Any DLL files found next to the compiled `.pyd` are bundled into the wheel
+- DLLs are placed in the same package directory as the `.pyd`
+- The extension will work without requiring external DLL installation
+
+**When `bundle-adjacent-dlls` is `false`**:
+
+- DLLs are NOT bundled into the wheel
+- End-users must have the required DLLs installed on their system
+- Only use this if you're distributing DLLs separately
+
+### Interaction Between Options
+
+| `windows-static-linking` | `bundle-adjacent-dlls` | Result |
+| ------------------------ | ---------------------- | ------ |
+| `true` (default) | `true` (default) | Static linking, no DLLs generated (recommended) |
+| `true` | `false` | Same as above (no DLLs to bundle) |
+| `false` | `true` | DLLs generated AND bundled into wheel |
+| `false` | `false` | DLLs generated, NOT bundled (manual distribution required) |
+
+!!! note
+    Static linking is the default and recommended approach for Windows builds. It produces standalone wheels that are easier to distribute and install.
 
 ## Build Profiles
 
@@ -74,6 +124,7 @@ nuwa watch --profile bench
 ```
 
 **Flag precedence:**
+
 1. Base `nim-flags` from `[tool.nuwa]`
 2. Profile flags (appended)
 3. CLI `--nim-flag` arguments (applied last)

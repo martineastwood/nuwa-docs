@@ -45,6 +45,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Support matrix: support.md
   - Nuwa Build:
       - Overview: nuwa-build/index.md
       - Project Structure: nuwa-build/structure.md

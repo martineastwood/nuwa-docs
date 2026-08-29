@@ -96,7 +96,7 @@ strategy:
     os: [macos-13, macos-14]  # Intel and Apple Silicon
 ```
 
-Or build universal wheels:
+Or build for both architectures on one runner (not in the tested matrix):
 
 ```yaml
 env:

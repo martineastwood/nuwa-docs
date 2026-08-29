@@ -201,9 +201,9 @@ jobs:
       - name: Build wheels
         uses: martineastwood/nuwa-build-action@v1
         with:
-          nim-version: "2.0.0"
+          nim-version: "2.2.10"
         env:
-          CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-*"
+          CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-* cp314-*"
           CIBW_SKIP: "pp* *-musllinux_*"
           CIBW_ARCHS_MACOS: "x86_64 arm64"
 

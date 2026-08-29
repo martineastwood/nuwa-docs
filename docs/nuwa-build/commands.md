@@ -52,6 +52,8 @@ After running `nuwa develop`, the compiled extension is in `{module_name}/`. You
 
 ## `nuwa watch`
 
+Requires `pip install "nuwa-build[watch]"`.
+
 Watch for file changes and automatically recompile:
 
 ```bash

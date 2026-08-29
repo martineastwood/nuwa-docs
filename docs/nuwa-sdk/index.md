@@ -35,10 +35,10 @@ proc greet(name: string): string {.nuwa_export.} =
   return "Hello, " & name
 ```
 
-When you build with `nuwa build`, the macro:
+When you build with `nuwa develop` or `nuwa build`, the macro:
 1. Exports the function to Python (via `nimpy`)
-2. Emits compile-time metadata about function signatures
-3. Enables automatic generation of `.pyi` stub files
+2. Writes compile-time metadata (JSON under `nuwaStubDir`, or `NUWA_STUB:` on stdout)
+3. Lets nuwa-build generate `.pyi` stub files
 
 ## Next Steps
 

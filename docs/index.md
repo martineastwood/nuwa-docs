@@ -6,6 +6,8 @@
 
 Nuwa is the open source toolkit for building Python extensions in Nim. It handles the code (SDK), the compilation (Build), and the distribution (CI/CD) so you don't have to.
 
+**Live docs:** this site. **Source:** [nuwa-build](https://github.com/martineastwood/nuwa-build). **Support matrix:** [tested platforms and versions](support.md).
+
 ## Why Nim?
 
 Nim combines the performance of C with the elegance of Python. It's perfect for building high-performance Python extensions:
@@ -38,6 +40,7 @@ Real-world examples built with Nuwa, including [Featuristic](examples/featuristi
 ```bash
 # Install
 pip install nuwa-build
+# CPython 3.10+ and a Nim compiler on PATH
 
 # Create a new project
 nuwa new my_project

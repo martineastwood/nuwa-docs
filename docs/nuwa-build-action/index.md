@@ -9,7 +9,7 @@ This action handles the complexity of installing the Nim compiler across differe
 ### Features
 
 - **Zero Configuration** - Automatically sets up Nim on the runner or inside build containers
-- **Multi-Platform Support** - Builds wheels for Linux (`manylinux`), macOS (`x86_64` & `arm64`), and Windows
+- **Multi-Platform Support** - Linux manylinux x86_64, macOS native Intel/ARM, Windows 64-bit (see [support matrix](../support.md))
 - **Cibuildwheel Integration** - Leverages industry-standard `cibuildwheel` for reliable wheel generation
 - **Customizable** - Supports specific Nim versions and standard cibuildwheel environment variables
 
@@ -36,7 +36,7 @@ jobs:
       - name: Build wheels
         uses: martineastwood/nuwa-build-action@v1
         with:
-          nim-version: "2.0.0"
+          nim-version: "2.2.10"
 
       - uses: actions/upload-artifact@v4
         with:
@@ -48,8 +48,8 @@ jobs:
 
 | Input          | Description                                 | Default  |
 | -------------- | ------------------------------------------- | -------- |
-| `nim-version`  | The version of the Nim compiler to install | `2.0.0`  |
-| `cibw-version` | The version of `cibuildwheel` to use       | `2.22.0` |
+| `nim-version`  | The version of the Nim compiler to install | `2.2.10` |
+| `cibw-version` | The version of `cibuildwheel` to use       | `4.2.0`  |
 
 ## Next Steps
 

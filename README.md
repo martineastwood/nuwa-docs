@@ -4,7 +4,9 @@
 
 ## Documentation
 
-📖 **[Live Documentation](https://martineastwood.github.io/nuwa-docs/)**
+**[Live documentation](https://martineastwood.github.io/nuwa-docs/)** (GitHub Pages). After the first successful `mkdocs gh-deploy`, enable Pages on the `gh-pages` branch if GitHub has not already picked it up.
+
+The support matrix (Python versions, OS, what is not tested) lives on that site.
 
 ## Repositories
 

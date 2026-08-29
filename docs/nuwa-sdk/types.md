@@ -114,12 +114,12 @@ def process_data(data: Dict[str, int]) -> int:
 
 ## Naming Conventions
 
-Nuwa automatically converts `camelCase` Nim function names to `snake_case` Python names:
+Generated stubs use the Nim procedure name as written. nimpy does not automatically convert `camelCase` to `snake_case`.
 
 ```nim
-proc myFunction(x: int): int {.nuwa_export.} =
-  return x
-# Generated: def my_function(x: int) -> int
+proc add(a: int, b: int): int {.nuwa_export.} =
+  return a
+# Generated: def add(a: int, b: int) -> int
 ```
 
 ## Generics

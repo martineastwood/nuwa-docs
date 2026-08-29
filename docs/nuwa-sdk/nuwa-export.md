@@ -49,10 +49,11 @@ The `nuwa_export` macro:
    - `bool` → `bool`
    - `void` → `None`
 
-3. **Emits metadata to compiler output**
-   - Outputs JSON as `NUWA_STUB:` lines
+3. **Emits metadata for nuwa-build**
+   - With `-d:nuwaStubDir=/path`, writes one JSON file per export
+   - Otherwise prints `NUWA_STUB:` lines to stdout
    - Includes function signature and docstring
-   - Captured by `nuwa build` process
+   - Captured by `nuwa develop` / `nuwa build`
 
 4. **Generates `.pyi` files**
    - Creates type stub in your package directory

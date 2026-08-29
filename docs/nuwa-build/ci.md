@@ -6,9 +6,11 @@ The `nuwa new` template includes a pre-configured GitHub Actions workflow for au
 
 The workflow uses a custom composite action that integrates with [cibuildwheel](https://github.com/pypa/cibuildwheel) to build wheels across:
 
-- **Platforms**: Linux (manylinux), macOS, Windows
-- **Python versions**: 3.9, 3.10, 3.11, 3.12, 3.13, 3.14
-- **Architectures**: x86_64, arm64 (Apple Silicon)
+- **Platforms**: Linux (manylinux **x86_64**), macOS (native Intel or Apple Silicon), Windows
+- **Python versions**: 3.10, 3.11, 3.12, 3.13, 3.14 (regular CPython, not free-threaded)
+- **Not included**: PyPy, musllinux, Linux aarch64, `cp314t`
+
+See the [support matrix](../support.md).
 
 ## How It Works
 
@@ -16,9 +18,9 @@ The custom action handles platform-specific Nim compiler installation:
 
 | Platform  | Installation Method                          |
 | --------- | -------------------------------------------- |
-| **Linux** | Installs Nim in Docker container via tar.xz  |
-| **Windows** | Uses Chocolatey (`choco install nim`)      |
-| **macOS** | Uses choosenim installer                     |
+| **Linux** | Official `linux_x64` Nim tarball inside the manylinux container (checksum-verified) |
+| **Windows** | Chocolatey (`choco install nim`) plus MinGW |
+| **macOS** | Official `macosx_x64` or `macosx_arm64` archive matching the runner (checksum-verified) |
 
 ## First-Time Setup
 
@@ -50,6 +52,6 @@ Edit `.github/workflows/publish.yml` to customize:
 - name: Build wheels
   uses: martineastwood/nuwa-build-action@v1
   with:
-    nim-version: "2.2.0"      # Nim version to install
-    cibw-version: "2.22.0"     # cibuildwheel version
+    nim-version: "2.2.10"      # Nim version to install
+    cibw-version: "4.2.0"     # cibuildwheel version
 ```

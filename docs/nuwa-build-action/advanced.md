@@ -11,7 +11,7 @@ steps:
   - name: Build wheels
     uses: martineastwood/nuwa-build-action@v1
     with:
-      nim-version: "2.0.0"
+      nim-version: "2.2.10"
     env:
       # Build specific Python versions
       CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-*"
@@ -21,13 +21,15 @@ steps:
 
 | Identifier | Python Version |
 | ---------- | -------------- |
-| `cp39-*`   | Python 3.9     |
 | `cp310-*`  | Python 3.10    |
 | `cp311-*`  | Python 3.11    |
 | `cp312-*`  | Python 3.12    |
 | `cp313-*`  | Python 3.13    |
 | `cp314-*`  | Python 3.14    |
-| `cp314t-*` | Python 3.14 (free-threaded) |
+| `cp39-*`   | Python 3.9 (not tested with current nuwa-build) |
+| `cp314t-*` | Python 3.14 free-threaded (not tested) |
+
+The generated `nuwa new` workflow builds `cp310-*` through `cp314-*` only.
 
 ## Skip Specific Builds
 
@@ -58,10 +60,11 @@ env:
 
 ### Linux Architectures
 
+The Action always installs **x86_64** Nim on Linux. Setting `CIBW_ARCHS_LINUX: aarch64` will not work until the Action gains an aarch64 Nim installer.
+
 ```yaml
 env:
-  # Build specific architectures
-  CIBW_ARCHS_LINUX: "x86_64 aarch64"
+  CIBW_ARCHS_LINUX: "x86_64"
 ```
 
 ### Windows Architectures
@@ -135,8 +138,8 @@ jobs:
       - name: Build wheels
         uses: martineastwood/nuwa-build-action@v1
         with:
-          nim-version: "2.0.0"
-          cibw-version: "2.22.0"
+          nim-version: "2.2.10"
+          cibw-version: "4.2.0"
         env:
           # Python 3.10-3.13 only
           CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-*"

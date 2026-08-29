@@ -1,52 +1,23 @@
 # Platform Details
 
-This action performs platform-specific setup to ensure the Nim compiler is available during the build process.
+This action installs the Nim compiler so `cibuildwheel` can compile your extension. See the [support matrix](../support.md) for what is tested.
 
 ## Linux
 
-### How It Works
-
-On Linux, wheels are built inside Docker containers (usually `manylinux`) to ensure compatibility.
+Wheels are built inside manylinux Docker containers.
 
 The action:
-1. Injects a script into `CIBW_BEFORE_ALL_LINUX`
-2. The script installs `gcc` and `curl`
-3. Downloads official Nim binaries via `curl`
-4. Extracts and adds Nim to PATH inside the Docker container
 
-### Container Environment
+1. Appends `*-musllinux*` to `CIBW_SKIP` unless you already skipped musllinux (official Nim binaries are glibc).
+2. Sets `CIBW_BEFORE_ALL_LINUX` to install `xz`, `curl`, and `gcc`, then download `nim-<version>-linux_x64.tar.xz` from nim-lang.org and verify the `.sha256` file.
 
-```yaml
-# manylinux2014 (default)
-CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
-CIBW_MANYLINUX_I686_IMAGE: manylinux2014
-CIBW_MANYLINUX_AARCH64_IMAGE: manylinux2014
-CIBW_MANYLINUX_PPC64LE_IMAGE: manylinux2014
-CIBW_MANYLINUX_S390X_IMAGE: manylinux2014
+**Linux aarch64 is not supported by this installer.** The archive name is always `linux_x64`.
 
-# manylinux_2_28 (optional)
-CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
-```
+### Container images
 
-### Installation Script
+cibuildwheel chooses the manylinux image. You can override image names with the usual `CIBW_MANYLINUX_*` variables. That does not change the Nim architecture: it remains x86_64.
 
-The action uses a script similar to:
-
-```bash
-# Inside manylinux container
-yum install -y gcc curl
-
-# Download and install Nim
-NIM_VERSION="2.0.0"
-curl -L -o nim.tar.xz \
-  "https://nim-lang.org/download/nim-${NIM_VERSION}-linux_x64.tar.xz"
-
-tar xf nim.tar.xz
-mv nim-${NIM_VERSION}-linux_x64 /opt/nim
-export PATH="/opt/nim/bin:$PATH"
-```
-
-### Customizing Linux Builds
+### Customizing Linux builds
 
 !!! warning
     If you override `CIBW_BEFORE_ALL_LINUX`, Nim installation will be skipped.
@@ -55,136 +26,35 @@ Use `CIBW_BEFORE_BUILD` instead:
 
 ```yaml
 env:
-  # Safe: runs after Nim is installed
   CIBW_BEFORE_BUILD_LINUX: "nimble install cligen"
 ```
 
 ## macOS
 
-### How It Works
+The action downloads the official archive for the runner CPU:
 
-- Installs Nim using the official `choosenim` installer
-- Adds Nim to the system PATH
-- Supports both x86_64 (Intel) and arm64 (Apple Silicon)
+- `nim-<version>-macosx_arm64.tar.xz` on Apple Silicon
+- `nim-<version>-macosx_x64.tar.xz` on Intel
 
-### Installation Process
-
-```bash
-# Install choosenim
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-
-# Install specific Nim version
-choosenim 2.0.0
-
-# Add to PATH
-export PATH="$HOME/.nimble/bin:$PATH"
-```
-
-### Architecture Specifics
+Checksums are verified with `shasum -a 256 -c`. Cross-compiling a macOS wheel for the other architecture is not in the tested matrix.
 
 ```yaml
 steps:
-  - name: Build wheels (Intel)
-    runs-on: macos-13
-    # Uses x86_64 runner
-
-  - name: Build wheels (Apple Silicon)
+  - name: Build wheels (Apple Silicon runner)
     runs-on: macos-14
-    # Uses arm64 runner
-```
-
-### Customizing macOS Builds
-
-```yaml
-steps:
-  - uses: actions/checkout@v4
-
-  - name: Install system dependencies
-    run: brew install libffi
-
-  - name: Build wheels
-    uses: martineastwood/nuwa-build-action@v1
+    # Native arm64 Nim
 ```
 
 ## Windows
 
-### How It Works
+- Installs the requested Nim version with Chocolatey
+- Installs MinGW so a C compiler is present
+- Adds `C:\tools\Nim\nim-<version>\bin` and MinGW to `PATH`
 
-- Installs Nim using `chocolatey` package manager
-- Adds Nim to the system PATH
-- Requires Windows runners
+Default generated projects statically link MinGW runtimes via nuwa-build (`windows-static-linking = true`).
 
-### Installation Process
+## Environment variables
 
-```powershell
-# Install via Chocolatey
-choco install nim -y
+Prefer `CIBW_BEFORE_BUILD_*` for extra setup. Do not replace `CIBW_BEFORE_ALL_LINUX` unless you install Nim yourself.
 
-# Refresh environment variables
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-```
-
-### Customizing Windows Builds
-
-```yaml
-steps:
-  - uses: actions/checkout@v4
-
-  - name: Install system dependencies
-    run: choco install openssl -y
-
-  - name: Build wheels
-    uses: martineastwood/nuwa-build-action@v1
-```
-
-## Platform-Specific Environment Variables
-
-### Linux-only
-
-```yaml
-env:
-  CIBW_BEFORE_ALL_LINUX: "yum install -y libffi-devel"
-  CIBW_BEFORE_BUILD_LINUX: "nimble install deps"
-```
-
-### macOS-only
-
-```yaml
-env:
-  CIBW_BEFORE_ALL_MACOS: "brew install libffi"
-  CIBW_BEFORE_BUILD_MACOS: "nimble install deps"
-```
-
-### Windows-only
-
-```yaml
-env:
-  CIBW_BEFORE_ALL_WINDOWS: "choco install openssl"
-  CIBW_BEFORE_BUILD_WINDOWS: "nimble install deps"
-```
-
-## Cross-Platform Example
-
-```yaml
-jobs:
-  build_wheels:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        include:
-          - os: ubuntu-latest
-            cibw-before: "yum install -y libffi-devel"
-          - os: macos-latest
-            cibw-before: "brew install libffi"
-          - os: windows-latest
-            cibw-before: "choco install openssl"
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install system dependencies
-        run: ${{ matrix.cibw-before }}
-
-      - name: Build wheels
-        uses: martineastwood/nuwa-build-action@v1
-```
+See [cibuildwheel settings](https://cibuildwheel.pypa.io/en/stable/options/) for `CIBW_BUILD`, `CIBW_SKIP`, and architecture flags.
