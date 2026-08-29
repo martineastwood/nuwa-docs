@@ -1,6 +1,6 @@
 # Featuristic (Nim port, unreleased)
 
-The Nuwa-based rewrite of Featuristic lives on the **`nim` branch**. It is **not released**. `pip install featuristic` and [featuristic.co.uk](https://www.featuristic.co.uk/) are the current Python product, not this port.
+The Nuwa-based rewrite of Featuristic lives on the **`nim` branch** as **2.0.0 (unreleased)**. `pip install featuristic` and [featuristic.co.uk](https://www.featuristic.co.uk/) are still **1.1.0** (pure Python).
 
 Use [nuwa-example](../nuwa-example/) if you want a project you can clone and build today.
 
@@ -20,7 +20,8 @@ https://github.com/martineastwood/featuristic/tree/nim
 git clone https://github.com/martineastwood/featuristic.git
 cd featuristic
 git checkout nim
-# Requires Nim on PATH and nuwa-build (CPython 3.10+)
+# Requires Nim on PATH, CPython 3.10+, and nuwa-build 0.5.1+
+pip install "nuwa-build>=0.5.1"
 nuwa develop
 ```
 
@@ -31,5 +32,5 @@ Do not treat this as a supported getting-started path for Nuwa.
 When it ships, this port is meant to show:
 
 - compiled Nim for the genetic-algorithm loop
-- Python / scikit-learn facing API
+- Python / scikit-learn facing API (`fitness_function` for custom synthesis losses; `objective_function` / `metric` for selection)
 - `nuwa develop` / `nuwa build` for the extension

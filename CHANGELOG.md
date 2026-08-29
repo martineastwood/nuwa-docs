@@ -8,5 +8,5 @@
 - Point the published site at `https://martineastwood.github.io/nuwa-docs/` (GitHub Pages). `getnuwa.com` is not this project.
 - Correct Action platform docs (macOS official archives, Linux x86_64 Nim).
 - Document file-based stub metadata (`nuwaStubDir`) instead of stdout-only.
-- Treat Featuristic as an unreleased `nim` branch, not a PyPI example. Lead examples with nuwa-example.
+- Treat Featuristic as unreleased 2.0 on the `nim` branch (not PyPI 1.1.0).
 - Document NumPy buffer views (`asNumpyArray`): consumer-only, C vs Fortran, 1D vs ND indexing.
