@@ -19,6 +19,6 @@ Versions for the current line-up:
 
 | Package | Version |
 | --- | --- |
-| nuwa-build | 0.5.0 |
-| nuwa-sdk | 0.4.3 |
+| nuwa-build | 0.5.1 |
+| nuwa-sdk | 0.4.4 |
 | nuwa-build-action | `@v1` (Nim 2.2.10, cibuildwheel 4.2.0) |

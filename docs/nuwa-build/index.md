@@ -23,7 +23,7 @@ Nuwa Build is a zero-configuration build system for compiling Nim code into Pyth
 
 - **Python**: CPython 3.10–3.14 (see the [support matrix](../support.md))
 - **Nim**: Compiler must be installed and in PATH
-- **nimpy / nuwa_sdk**: Installed automatically from `nimble-deps` (new projects pin `nimpy@0.2.1` and `nuwa_sdk@0.4.3`)
+- **nimpy / nuwa_sdk**: Installed automatically from `nimble-deps` (new projects pin `nimpy@0.2.1` and `nuwa_sdk@0.4.4`)
 
 Watch mode and Jupyter magics are optional:
 

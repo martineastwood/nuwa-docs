@@ -10,6 +10,7 @@ Nuwa SDK provides core utilities for Nim/Python interop when building extensions
 
 - **`nuwa_export`** - Macro for automatic generation of Python type stubs (`.pyi` files)
 - **`withNogil`** - Template for releasing the Python GIL during pure Nim code execution
+- **`asNumpyArray`** - Zero-copy views of existing NumPy / PEP 3118 buffers (does not allocate ndarrays)
 
 ## Installation
 
@@ -44,4 +45,5 @@ When you build with `nuwa develop` or `nuwa build`, the macro:
 
 - [nuwa_export Macro](nuwa-export.md) - Automatic type stub generation
 - [GIL Release](gil-release.md) - Parallel execution with withNogil
+- [NumPy buffers](numpy.md) - Zero-copy views of existing arrays
 - [Type Mappings](types.md) - Nim to Python type conversions

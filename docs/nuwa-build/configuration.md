@@ -33,7 +33,7 @@ output-location = "auto"
 nim-flags = []
 
 # Nimble dependencies (auto-installed before build)
-nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.3"]
+nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.4"]
 ```
 
 ## Configuration Options

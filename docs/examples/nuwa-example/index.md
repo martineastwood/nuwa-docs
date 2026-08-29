@@ -530,7 +530,7 @@ nim-source = "nim"
 module-name = "example_project"
 lib-name = "example_project_lib"
 entry-point = "example_project_lib.nim"
-nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.3"]
+nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.4"]
 
 # Build profiles
 [tool.nuwa.profiles.dev]

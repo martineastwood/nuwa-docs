@@ -65,6 +65,7 @@ nav:
       - Overview: nuwa-sdk/index.md
       - nuwa_export Macro: nuwa-sdk/nuwa-export.md
       - GIL Release: nuwa-sdk/gil-release.md
+      - NumPy buffers: nuwa-sdk/numpy.md
       - Type Mappings: nuwa-sdk/types.md
   - Examples:
       - Overview: examples/index.md

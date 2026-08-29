@@ -20,7 +20,7 @@ New projects already list `nimpy` and `nuwa_sdk` in `nimble-deps`. `nuwa develop
 
 ```toml
 [tool.nuwa]
-nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.3"]
+nimble-deps = ["nimpy@0.2.1", "nuwa_sdk@0.4.4"]
 ```
 
 **Option 2: Manual installation**
