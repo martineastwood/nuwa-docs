@@ -1,0 +1,2566 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Central documentation for all Nuwa projects">
+      
+      
+        <meta name="author" content="Nuwa">
+      
+      
+        <link rel="canonical" href="https://martineastwood.github.io/nuwa-docs/examples/nuwa-example/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../featuristic/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Nuwa Example - Nuwa Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nuwa-example" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nuwa Documentation" class="md-header__button md-logo" aria-label="Nuwa Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nuwa Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nuwa Example
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/martineastwood/nuwa-build" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    martineastwood/nuwa-build
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support matrix
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../nuwa-build/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nuwa Build
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../nuwa-build-action/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nuwa Build Action
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../nuwa-sdk/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nuwa SDK
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nuwa Documentation" class="md-nav__button md-logo" aria-label="Nuwa Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Nuwa Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/martineastwood/nuwa-build" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    martineastwood/nuwa-build
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nuwa-build/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuwa Build
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nuwa Build
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jupyter Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/ai-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nuwa-build-action/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuwa Build Action
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nuwa Build Action
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build-action/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build-action/platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Details
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build-action/publishing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing to PyPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-build-action/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nuwa-sdk/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuwa SDK
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nuwa SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-sdk/nuwa-export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nuwa_export Macro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-sdk/gil-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GIL Release
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-sdk/numpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NumPy buffers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuwa-sdk/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuwa Example
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuwa Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        example_project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="example_project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features-demonstrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features Demonstrated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-types-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Types / Default Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enums
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variadic-functions-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variadic Functions (Sequences)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytes-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bytes Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Set Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary-table-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary / Table Conversions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-types-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Types / Records
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-callable-callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Callable Callbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays-zero-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NumPy Arrays (Zero-Copy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-with-gil-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NumPy with GIL Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-place-numpy-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Place NumPy Modification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-dimensional-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Dimensional Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-numpy-arrays-from-nim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating NumPy Arrays from Nim
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding New Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-to-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing to PyPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featuristic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Featuristic (unreleased)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        example_project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="example_project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features-demonstrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features Demonstrated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-types-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Types / Default Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enums
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variadic-functions-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variadic Functions (Sequences)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytes-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bytes Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Set Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary-table-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary / Table Conversions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-types-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Types / Records
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-callable-callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Callable Callbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays-zero-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NumPy Arrays (Zero-Copy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-with-gil-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NumPy with GIL Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-place-numpy-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Place NumPy Modification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-dimensional-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Dimensional Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-numpy-arrays-from-nim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating NumPy Arrays from Nim
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding New Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-to-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing to PyPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="nuwa-example">Nuwa Example</h1>
+<p>Example projects demonstrating how to use Nuwa tools.</p>
+<h2 id="overview">Overview</h2>
+<p>This repository contains example projects showing how to build Python extensions with Nim using the Nuwa toolchain.</p>
+<h2 id="example_project">example_project</h2>
+<p>A comprehensive example project that demonstrates all the key features of building Python extensions with Nim using Nuwa.</p>
+<h3 id="key-features-demonstrated">Key Features Demonstrated</h3>
+<ul>
+<li><strong>Zero-configuration build system</strong> - No setup.py or custom build scripts needed</li>
+<li><strong>Automatic type stubs</strong> (<code>.pyi</code> files) - Full IDE autocomplete and type checking</li>
+<li><strong>Build profiles</strong> - Debug, release, and benchmarking configurations</li>
+<li><strong>Editable installs</strong> - Rapid development workflow</li>
+<li><strong>NumPy integration</strong> - Zero-copy array access using the buffer protocol</li>
+<li><strong>GIL release</strong> - Performance optimization for CPU-intensive operations</li>
+<li><strong>Python callbacks</strong> - Call Python functions from Nim</li>
+<li><strong>GitHub Actions CI/CD</strong> - Automated multi-platform wheel building and PyPI publishing</li>
+<li><strong>pytest integration</strong> - Complete test suite for Nim extensions</li>
+</ul>
+<h3 id="example-functions">Example Functions</h3>
+<p>The project includes examples of common Nim-Python interop patterns:</p>
+<h4 id="basic-types">Basic Types</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello, "</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">"!"</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">is_even</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="nb">bool</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">mod</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">greet</span><span class="p">,</span> <span class="n">add</span><span class="p">,</span> <span class="n">is_even</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">"World"</span><span class="p">)</span>  <span class="c1"># "Hello, World!"</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>       <span class="c1"># 5</span>
+<span class="n">is_even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>      <span class="c1"># True</span>
+</code></pre></div>
+<h4 id="error-handling">Error Handling</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">safe_divide</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nb">float</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nb">float</span><span class="p">):</span><span class="w"> </span><span class="nb">float</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Cannot divide by zero"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">safe_divide</span>
+
+<span class="n">safe_divide</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>  <span class="c1"># 5.0</span>
+<span class="n">safe_divide</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># Raises ValueError: Cannot divide by zero</span>
+</code></pre></div>
+<h4 id="validation-functions">Validation Functions</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="nb">bool</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">email</span><span class="p">.</span><span class="n">len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Email cannot be empty"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="s">"@"</span><span class="w"> </span><span class="ow">notin</span><span class="w"> </span><span class="n">email</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Email must contain @ symbol"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="s">"."</span><span class="w"> </span><span class="ow">notin</span><span class="w"> </span><span class="n">email</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">"@"</span><span class="p">)</span><span class="o">[</span><span class="p">^</span><span class="mi">1</span><span class="o">]</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Email domain must contain a dot"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kp">true</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">validate_email</span>
+
+<span class="n">validate_email</span><span class="p">(</span><span class="s2">"user@example.com"</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="n">validate_email</span><span class="p">(</span><span class="s2">"invalid"</span><span class="p">)</span>            <span class="c1"># Raises ValueError</span>
+</code></pre></div>
+<h4 id="optional-types-default-values">Optional Types / Default Values</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">get_with_default</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">Table</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">key</span><span class="o">]</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">default</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_with_default</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"timeout"</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="n">get_with_default</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="s2">"timeout"</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># 30</span>
+<span class="n">get_with_default</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="s2">"debug"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># 0</span>
+</code></pre></div>
+<h4 id="enums">Enums</h4>
+<p>Enums in Nim are exposed through accessor functions:</p>
+<div class="highlight"><pre><span></span><code><span class="k">type</span>
+<span class="w">  </span><span class="n">StatusCode</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">enum</span>
+<span class="w">    </span><span class="n">scOk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span>
+<span class="w">    </span><span class="n">scNotFound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">404</span>
+<span class="w">    </span><span class="n">scServerError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">status_ok</span><span class="o">*</span><span class="p">():</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">StatusCode</span><span class="p">.</span><span class="n">scOk</span><span class="p">)</span>
+<span class="k">proc</span><span class="w"> </span><span class="nf">status_not_found</span><span class="o">*</span><span class="p">():</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">StatusCode</span><span class="p">.</span><span class="n">scNotFound</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">get_status_message</span><span class="p">(</span><span class="n">code</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StatusCode</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">status</span>
+<span class="w">  </span><span class="k">of</span><span class="w"> </span><span class="nl">StatusCode.scOk</span><span class="o">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Success"</span>
+<span class="w">  </span><span class="k">of</span><span class="w"> </span><span class="nl">StatusCode.scNotFound</span><span class="o">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Not Found"</span>
+<span class="w">  </span><span class="k">of</span><span class="w"> </span><span class="nl">StatusCode.scServerError</span><span class="o">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Internal Server Error"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">status_ok</span><span class="p">,</span> <span class="n">get_status_message</span>
+
+<span class="n">get_status_message</span><span class="p">(</span><span class="n">status_ok</span><span class="p">())</span>  <span class="c1"># "Success"</span>
+</code></pre></div>
+<h4 id="variadic-functions-sequences">Variadic Functions (Sequences)</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">sum_all</span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">:</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">concatenate_all</span><span class="o">*</span><span class="p">(</span><span class="n">parts</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">string</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">parts</span><span class="p">.</span><span class="n">pairs</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="w">    </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">sum_all</span><span class="p">,</span> <span class="n">concatenate_all</span>
+
+<span class="n">sum_all</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>           <span class="c1"># 15</span>
+<span class="n">concatenate_all</span><span class="p">([</span><span class="s2">"Hello"</span><span class="p">,</span> <span class="s2">"world"</span><span class="p">])</span>  <span class="c1"># "Hello world"</span>
+</code></pre></div>
+<h4 id="tuples">Tuples</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">get_coordinates</span><span class="p">():</span><span class="w"> </span><span class="k">tuple</span><span class="o">[</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="mf">10.5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="mf">20.3</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">divide_with_remainder</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="k">tuple</span><span class="o">[</span><span class="n">quotient</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">remainder</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Cannot divide by zero"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">quotient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="ow">div</span><span class="w"> </span><span class="n">b</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">remainder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="ow">mod</span><span class="w"> </span><span class="n">b</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">quotient</span><span class="p">:</span><span class="w"> </span><span class="n">quotient</span><span class="p">,</span><span class="w"> </span><span class="n">remainder</span><span class="p">:</span><span class="w"> </span><span class="n">remainder</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_coordinates</span><span class="p">,</span> <span class="n">divide_with_remainder</span>
+
+<span class="n">get_coordinates</span><span class="p">()</span>                  <span class="c1"># (10.5, 20.3)</span>
+<span class="n">divide_with_remainder</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>       <span class="c1"># (3, 2)</span>
+</code></pre></div>
+<h4 id="bytes-handling">Bytes Handling</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="n">std</span><span class="o">/</span><span class="n">base64</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">reverse_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSeq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">len</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">data</span><span class="p">.</span><span class="n">len</span><span class="p">:</span>
+<span class="w">    </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">data</span><span class="p">.</span><span class="n">len</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="o">]</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">bytes_to_base64</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">base64</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">base64_to_bytes</span><span class="p">(</span><span class="n">encoded</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">decoded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base64</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSeq</span><span class="o">[</span><span class="n">byte</span><span class="o">]</span><span class="p">(</span><span class="n">decoded</span><span class="p">.</span><span class="n">len</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">decoded</span><span class="p">.</span><span class="n">pairs</span><span class="p">:</span>
+<span class="w">    </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">uint8</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">reverse_bytes</span><span class="p">,</span> <span class="n">bytes_to_base64</span><span class="p">,</span> <span class="n">base64_to_bytes</span>
+
+<span class="n">reverse_bytes</span><span class="p">(</span><span class="sa">b</span><span class="s2">"hello"</span><span class="p">)</span>                      <span class="c1"># b'olleh'</span>
+<span class="n">bytes_to_base64</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Hello, World!"</span><span class="p">)</span>            <span class="c1"># "SGVsbG8sIFdvcmxkIQ=="</span>
+<span class="n">base64_to_bytes</span><span class="p">(</span><span class="s2">"SGVsbG8sIFdvcmxkIQ=="</span><span class="p">)</span>      <span class="c1"># b'Hello, World!'</span>
+</code></pre></div>
+<h4 id="python-set-operations">Python Set Operations</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">get_unique_ints</span><span class="o">*</span><span class="p">(</span><span class="n">items</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="n">Table</span><span class="o">[</span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="nb">bool</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initTable</span><span class="o">[</span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="nb">bool</span><span class="o">]</span><span class="p">()</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">items</span><span class="p">:</span>
+<span class="w">    </span><span class="n">result</span><span class="o">[</span><span class="n">item</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kp">true</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">set_union_ints</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">seen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initTable</span><span class="o">[</span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="nb">bool</span><span class="o">]</span><span class="p">()</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@[]</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">seen</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="w">      </span><span class="n">seen</span><span class="o">[</span><span class="n">item</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kp">true</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">b</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">seen</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="w">      </span><span class="n">seen</span><span class="o">[</span><span class="n">item</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kp">true</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_unique_ints</span><span class="p">,</span> <span class="n">set_union_ints</span>
+
+<span class="n">get_unique_ints</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>        <span class="c1"># {1: True, 2: True, 3: True}</span>
+<span class="n">set_union_ints</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>       <span class="c1"># [1, 2, 3, 4, 5]</span>
+</code></pre></div>
+<h4 id="string-operations">String Operations</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newStringOfCap</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">countdown</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">high</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">count_words</span><span class="p">(</span><span class="n">text</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="n">splitWhitespace</span><span class="p">()</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="n">len</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">reverse_string</span><span class="p">,</span> <span class="n">count_words</span>
+
+<span class="n">reverse_string</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>     <span class="c1"># "olleh"</span>
+<span class="n">count_words</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">)</span>  <span class="c1"># 2</span>
+</code></pre></div>
+<h4 id="collections">Collections</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">calculate_average</span><span class="p">(</span><span class="n">numbers</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">float</span><span class="o">]</span><span class="p">):</span><span class="w"> </span><span class="nb">float</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Cannot calculate average of empty sequence"</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">:</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculate_average</span>
+
+<span class="n">calculate_average</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>  <span class="c1"># 3.0</span>
+</code></pre></div>
+<h4 id="default-parameters">Default Parameters</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">base</span><span class="p">:</span><span class="w"> </span><span class="nb">float</span><span class="p">,</span><span class="w"> </span><span class="n">exponent</span><span class="p">:</span><span class="w"> </span><span class="nb">float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">):</span><span class="w"> </span><span class="nb">float</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">exponent</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">power</span>
+
+<span class="n">power</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>       <span class="c1"># 25.0 (default exponent is 2)</span>
+<span class="n">power</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span> <span class="c1"># 1024.0</span>
+</code></pre></div>
+<h4 id="dictionary-table-conversions">Dictionary / Table Conversions</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">count_characters</span><span class="p">(</span><span class="n">text</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">):</span><span class="w"> </span><span class="n">Table</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initTable</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="p">()</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">text</span><span class="p">:</span>
+<span class="w">    </span><span class="k">let</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">ch</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="w">      </span><span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">      </span><span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">merge_configs</span><span class="p">(</span><span class="n">configs</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="n">Table</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]]</span><span class="p">):</span><span class="w"> </span><span class="n">Table</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initTable</span><span class="o">[</span><span class="nb">string</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="o">]</span><span class="p">()</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">pairs</span><span class="p">:</span>
+<span class="w">      </span><span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">count_characters</span><span class="p">,</span> <span class="n">merge_configs</span>
+
+<span class="n">count_characters</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>  <span class="c1"># {'h': 1, 'e': 1, 'l': 2, 'o': 1}</span>
+<span class="n">merge_configs</span><span class="p">([{</span><span class="s2">"timeout"</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span> <span class="p">{</span><span class="s2">"timeout"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">"debug"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}])</span>  <span class="c1"># {'timeout': 60, 'debug': 1}</span>
+</code></pre></div>
+<h4 id="object-types-records">Object Types / Records</h4>
+<div class="highlight"><pre><span></span><code><span class="k">type</span>
+<span class="w">  </span><span class="n">Point</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">object</span>
+<span class="w">    </span><span class="n">x</span><span class="o">*</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span>
+<span class="w">    </span><span class="n">y</span><span class="o">*</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span>
+
+<span class="w">  </span><span class="n">Rectangle</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">object</span>
+<span class="w">    </span><span class="n">topLeft</span><span class="o">*</span><span class="p">:</span><span class="w"> </span><span class="n">Point</span>
+<span class="w">    </span><span class="n">bottomRight</span><span class="o">*</span><span class="p">:</span><span class="w"> </span><span class="n">Point</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">create_point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span><span class="p">):</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">point_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="w"> </span><span class="n">Point</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">:</span><span class="w"> </span><span class="n">Point</span><span class="p">):</span><span class="w"> </span><span class="nb">float64</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="n">x</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="n">y</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dy</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_point</span><span class="p">,</span> <span class="n">point_distance</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">create_point</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">create_point</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+<span class="n">point_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>  <span class="c1"># 5.0</span>
+</code></pre></div>
+<h4 id="python-callable-callbacks">Python Callable Callbacks</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">apply_callback</span><span class="p">(</span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSeq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">(</span><span class="n">values</span><span class="p">.</span><span class="n">len</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">values</span><span class="p">.</span><span class="n">len</span><span class="p">:</span>
+<span class="w">    </span><span class="k">let</span><span class="w"> </span><span class="n">transformed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">callback</span><span class="p">.</span><span class="n">callObject</span><span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span>
+<span class="w">    </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transformed</span><span class="p">.</span><span class="n">to</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">filter_with_predicate</span><span class="p">(</span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">int</span><span class="o">]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@[]</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">values</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">predicate</span><span class="p">.</span><span class="n">callObject</span><span class="p">(</span><span class="n">val</span><span class="p">).</span><span class="n">to</span><span class="p">(</span><span class="nb">bool</span><span class="p">):</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">apply_callback</span><span class="p">,</span> <span class="n">filter_with_predicate</span>
+
+<span class="n">apply_callback</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># [2, 4, 6, 8, 10]</span>
+<span class="n">filter_with_predicate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># [2, 4, 6]</span>
+</code></pre></div>
+<h4 id="numpy-arrays-zero-copy">NumPy Arrays (Zero-Copy)</h4>
+<p>Reading NumPy arrays without copying:</p>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">numpy_array_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">):</span><span class="w"> </span><span class="nb">int64</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">npArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asNumpyArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="nb">int64</span><span class="p">)</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">items</span><span class="p">(</span><span class="n">npArr</span><span class="p">):</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">val</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">numpy_array_sum</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+<span class="n">numpy_array_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>  <span class="c1"># 15</span>
+</code></pre></div>
+<h4 id="numpy-with-gil-release">NumPy with GIL Release</h4>
+<p>Optimized operations that release the Python GIL:</p>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">numpy_array_sum_fast</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">):</span><span class="w"> </span><span class="nb">int64</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">npArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asNumpyArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="nb">int64</span><span class="p">)</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">npArr</span><span class="p">.</span><span class="n">len</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">npArr</span><span class="p">.</span><span class="n">data</span>
+
+<span class="w">  </span><span class="n">withNogil</span><span class="p">:</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="il">'i64</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+<span class="w">      </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">numpy_array_sum_fast</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+<span class="n">numpy_array_sum_fast</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>  <span class="c1"># 499999500000</span>
+</code></pre></div>
+<h4 id="in-place-numpy-modification">In-Place NumPy Modification</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">numpy_array_multiply_in_place</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">,</span><span class="w"> </span><span class="n">scalar</span><span class="p">:</span><span class="w"> </span><span class="nb">float64</span><span class="p">)</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">npArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asNumpyArrayWrite</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="nb">float64</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">mitems</span><span class="p">(</span><span class="n">npArr</span><span class="p">):</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scalar</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">numpy_array_multiply_in_place</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">numpy_array_multiply_in_place</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>  <span class="c1"># [2.0, 4.0, 6.0]</span>
+</code></pre></div>
+<h4 id="multi-dimensional-arrays">Multi-Dimensional Arrays</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">numpy_matrix_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="n">PyObject</span><span class="p">):</span><span class="w"> </span><span class="nb">seq</span><span class="o">[</span><span class="nb">seq</span><span class="o">[</span><span class="nb">float64</span><span class="o">]]</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">matA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asStridedArray</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="nb">float64</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="n">matB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asStridedArray</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="nb">float64</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">rowsA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matA</span><span class="p">.</span><span class="n">shape</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">colsA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matA</span><span class="p">.</span><span class="n">shape</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">colsB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matB</span><span class="p">.</span><span class="n">shape</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">matB</span><span class="p">.</span><span class="n">shape</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">colsA</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Matrix dimensions mismatch for multiplication"</span><span class="p">)</span>
+
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSeq</span><span class="o">[</span><span class="nb">seq</span><span class="o">[</span><span class="nb">float64</span><span class="o">]]</span><span class="p">(</span><span class="n">rowsA</span><span class="p">)</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">rowsA</span><span class="p">:</span>
+<span class="w">    </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSeq</span><span class="o">[</span><span class="nb">float64</span><span class="o">]</span><span class="p">(</span><span class="n">colsB</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">colsB</span><span class="p">:</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0</span><span class="p">..</span><span class="o">&lt;</span><span class="n">colsA</span><span class="p">:</span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">matA</span><span class="o">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">matB</span><span class="o">[</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">]</span>
+<span class="w">      </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">numpy_matrix_multiply</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">numpy_matrix_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># [[19.0, 22.0], [43.0, 50.0]]</span>
+</code></pre></div>
+<h4 id="creating-numpy-arrays-from-nim">Creating NumPy Arrays from Nim</h4>
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="w"> </span><span class="nf">create_range_array</span><span class="p">(</span><span class="n">start</span><span class="p">:</span><span class="w"> </span><span class="nb">int64</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="p">:</span><span class="w"> </span><span class="nb">int64</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">:</span><span class="w"> </span><span class="nb">int64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">):</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Step cannot be zero"</span><span class="p">)</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">stop</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="ow">div</span><span class="w"> </span><span class="n">step</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="n">newException</span><span class="p">(</span><span class="n">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">"Invalid range: size must be positive"</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">np</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pyImport</span><span class="p">(</span><span class="s">"numpy"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">)</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">create_zeros_array</span><span class="p">(</span><span class="n">size</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="k">let</span><span class="w"> </span><span class="n">np</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pyImport</span><span class="p">(</span><span class="s">"numpy"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_range_array</span><span class="p">,</span> <span class="n">create_zeros_array</span>
+
+<span class="n">create_range_array</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># np.array([0, 2, 4, 6, 8])</span>
+<span class="n">create_zeros_array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>         <span class="c1"># np.array([0.0, 0.0, 0.0, 0.0, 0.0])</span>
+</code></pre></div>
+<h3 id="quick-start">Quick Start</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Clone and navigate to the example</span>
+<span class="nb">cd</span><span class="w"> </span>nuwa-example/example_project
+
+<span class="c1"># Build the extension (debug mode)</span>
+nuwa<span class="w"> </span>develop
+
+<span class="c1"># Run the example script</span>
+python<span class="w"> </span>example.py
+
+<span class="c1"># Run tests</span>
+pytest
+</code></pre></div>
+<h3 id="project-structure">Project Structure</h3>
+<div class="highlight"><pre><span></span><code>example_project/
+├── .github/
+│   └── workflows/
+│       └── publish.yml          # PyPI publishing workflow
+├── nim/                          # Nim source files
+│   ├── example_project_lib.nim   # Main entry point
+│   └── helpers.nim               # Additional modules
+├── example_project/              # Python package
+│   ├── __init__.py              # Package wrapper
+│   ├── example_project_lib.so   # Compiled extension (generated)
+│   └── example_project_lib.pyi  # Type stubs (generated)
+├── tests/                       # Pytest tests
+│   └── test_example_project.py
+├── example.py                   # Usage examples
+└── pyproject.toml               # Project configuration
+</code></pre></div>
+<h3 id="configuration">Configuration</h3>
+<p>The project uses <code>pyproject.toml</code> for all configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"nuwa-build"</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"nuwa_build"</span>
+
+<span class="k">[tool.nuwa]</span>
+<span class="n">nim-source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"nim"</span>
+<span class="n">module-name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"example_project"</span>
+<span class="n">lib-name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"example_project_lib"</span>
+<span class="n">entry-point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"example_project_lib.nim"</span>
+<span class="n">nimble-deps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"nimpy@0.2.1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"nuwa_sdk@0.4.4"</span><span class="p">]</span>
+
+<span class="c1"># Build profiles</span>
+<span class="k">[tool.nuwa.profiles.dev]</span>
+<span class="n">nim-flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"-d:debug"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--debugger:native"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--linenos:on"</span><span class="p">]</span>
+
+<span class="k">[tool.nuwa.profiles.release]</span>
+<span class="n">nim-flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"-d:release"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--opt:speed"</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="adding-new-functions">Adding New Functions</h3>
+<ol>
+<li>
+<p>Edit <code>nim/example_project_lib.nim</code>:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="n">nuwa_sdk</span>
+
+<span class="k">proc</span><span class="w"> </span><span class="nf">my_function</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">):</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="sx">{.nuwa_export.}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="sd">## Your function documentation</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"Result: "</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">$</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Rebuild:
+<div class="highlight"><pre><span></span><code>nuwa<span class="w"> </span>develop
+</code></pre></div></p>
+</li>
+<li>
+<p>Use from Python (with full autocomplete):
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">example_project</span><span class="w"> </span><span class="kn">import</span> <span class="n">my_function</span>
+
+<span class="c1"># IDE shows: my_function(x: int, y: int) -&gt; str</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">my_function</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="publishing-to-pypi">Publishing to PyPI</h3>
+<p>The project includes a GitHub Actions workflow for automated publishing:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</code></pre></div>
+<p>The workflow automatically builds wheels for:</p>
+<ul>
+<li><strong>Platforms</strong>: Linux, macOS, Windows</li>
+<li><strong>Python versions</strong>: 3.10, 3.11, 3.12, 3.13, 3.14 (regular CPython)</li>
+</ul>
+<h3 id="source">Source</h3>
+<p>Repository: <a href="https://github.com/martineastwood/nuwa-example">github.com/martineastwood/nuwa-example</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.indexes", "search.suggest", "search.highlight", "repo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mkdocs"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
