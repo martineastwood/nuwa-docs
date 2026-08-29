@@ -68,8 +68,8 @@ nav:
       - Type Mappings: nuwa-sdk/types.md
   - Examples:
       - Overview: examples/index.md
-      - Featuristic: examples/featuristic/index.md
       - Nuwa Example: examples/nuwa-example/index.md
+      - Featuristic (unreleased): examples/featuristic/index.md
 
 extra:
   version:

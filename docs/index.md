@@ -33,7 +33,7 @@ GitHub Action for automated wheel building across platforms.
 
 ### [Examples](examples/)
 
-Real-world examples built with Nuwa, including [Featuristic](examples/featuristic/) for feature engineering.
+The clone-and-build starter is [nuwa-example](examples/nuwa-example/). A larger library ([Featuristic](examples/featuristic/)) is being ported on a GitHub `nim` branch and is not released.
 
 ## Quick Start
 
