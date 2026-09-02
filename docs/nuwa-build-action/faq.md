@@ -6,13 +6,14 @@ Common questions and issues when using nuwa-build-action.
 
 ### Can I run custom commands before the build?
 
-Yes, but be careful on Linux. On Linux, this action sets the `CIBW_BEFORE_ALL_LINUX` environment variable to install Nim. If you overwrite this variable, Nim installation will be skipped.
+Yes. On Linux, the action installs Nim and then runs your existing
+`CIBW_BEFORE_ALL_LINUX` hook.
 
-**Safe approach** - Use `CIBW_BEFORE_BUILD`:
+Use either the once-per-container or once-per-wheel hook as appropriate:
 
 ```yaml
 env:
-  # Safe: runs after Nim is installed
+  CIBW_BEFORE_ALL_LINUX: "nimble install deps -y"
   CIBW_BEFORE_BUILD_LINUX: "nimble install deps"
   CIBW_BEFORE_BUILD_MACOS: "nimble install deps"
   CIBW_BEFORE_BUILD_WINDOWS: "nimble install deps"
@@ -58,7 +59,7 @@ Use the `CIBW_SKIP` environment variable:
 
 ```yaml
 env:
-  CIBW_SKIP: "pp* *-musllinux_* win32"
+  CIBW_SKIP: "*-musllinux_* *-win32"
 ```
 
 ## Platform-Specific
@@ -67,14 +68,14 @@ env:
 
 #### Why does the build fail on Linux?
 
-Linux builds run inside Docker containers. If you're overriding `CIBW_BEFORE_ALL_LINUX`, Nim won't be installed.
+Linux builds run inside Docker containers. Use a native x86_64 or ARM64 runner
+matching `CIBW_ARCHS_LINUX`; the action selects the corresponding Nim archive.
 
-**Solution**: Use `CIBW_BEFORE_BUILD` instead:
+Custom setup can be appended safely:
 
 ```yaml
 env:
-  # Don't override CIBW_BEFORE_ALL_LINUX
-  CIBW_BEFORE_BUILD_LINUX: "your commands here"
+  CIBW_BEFORE_ALL_LINUX: "your commands here"
 ```
 
 #### How do I install system libraries on Linux?
@@ -93,7 +94,7 @@ Use the `macos-14` runner which is arm64:
 ```yaml
 strategy:
   matrix:
-    os: [macos-13, macos-14]  # Intel and Apple Silicon
+    os: [macos-15-intel, macos-14]  # Intel and Apple Silicon
 ```
 
 Or build for both architectures on one runner (not in the tested matrix):
@@ -155,7 +156,7 @@ publish:
 ### Build fails with "Nim compiler not found"
 
 1. Check that you're using the correct action version
-2. Verify you're not overriding `CIBW_BEFORE_ALL_LINUX` on Linux
+2. Verify the Linux runner architecture matches `CIBW_ARCHS_LINUX`
 3. Check the build logs for installation errors
 
 ### Build succeeds but tests fail

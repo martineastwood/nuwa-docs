@@ -37,8 +37,8 @@ Use `CIBW_SKIP` to exclude certain builds:
 
 ```yaml
 env:
-  # Skip PyPy and musllinux builds
-  CIBW_SKIP: "pp* *-musllinux_*"
+  # Official Nim binaries are glibc-based, so skip musllinux
+  CIBW_SKIP: "*-musllinux_*"
 
   # Skip Windows 32-bit
   CIBW_SKIP: "win32 *-win32"
@@ -49,22 +49,27 @@ env:
 
 ## Architecture Targets
 
-### macOS Universal Wheels
+### macOS Architectures
 
-Build universal wheels (x86_64 + arm64) for macOS:
+Use a native runner for each architecture. Cross-compiling or universal2 wheels
+are not in the tested matrix:
 
 ```yaml
-env:
-  CIBW_ARCHS_MACOS: "x86_64 arm64"
+matrix:
+  include:
+    - {os: macos-14, arch: arm64}
+    - {os: macos-15-intel, arch: x86_64}
 ```
 
 ### Linux Architectures
 
-The Action always installs **x86_64** Nim on Linux. Setting `CIBW_ARCHS_LINUX: aarch64` will not work until the Action gains an aarch64 Nim installer.
+The action installs Nim matching the native Linux runner:
 
 ```yaml
-env:
-  CIBW_ARCHS_LINUX: "x86_64"
+matrix:
+  include:
+    - {os: ubuntu-latest, arch: x86_64}
+    - {os: ubuntu-24.04-arm, arch: aarch64}
 ```
 
 ### Windows Architectures
@@ -93,8 +98,8 @@ env:
   CIBW_BEFORE_ALL_WINDOWS: "nimble install deps"
 ```
 
-!!! warning
-    On Linux, the action sets `CIBW_BEFORE_ALL_LINUX` to install Nim. If you override this, Nim won't be installed and the build will fail. Use `CIBW_BEFORE_BUILD` instead for Linux.
+On Linux, the action installs Nim first and then runs a caller-provided
+`CIBW_BEFORE_ALL_LINUX` hook.
 
 ### Test Commands
 
@@ -143,10 +148,8 @@ jobs:
         env:
           # Python 3.10-3.13 only
           CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-*"
-          # Skip PyPy and musllinux
-          CIBW_SKIP: "pp* *-musllinux_*"
-          # Universal macOS wheels
-          CIBW_ARCHS_MACOS: "x86_64 arm64"
+          # Official Nim binaries are glibc-based
+          CIBW_SKIP: "*-musllinux_*"
           # Test after building
           CIBW_TEST_COMMAND: "pytest {project}/tests"
           CIBW_TEST_REQUIRES: "pytest"

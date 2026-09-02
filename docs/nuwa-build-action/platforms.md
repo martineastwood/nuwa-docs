@@ -9,24 +9,26 @@ Wheels are built inside manylinux Docker containers.
 The action:
 
 1. Appends `*-musllinux*` to `CIBW_SKIP` unless you already skipped musllinux (official Nim binaries are glibc).
-2. Sets `CIBW_BEFORE_ALL_LINUX` to install `xz`, `curl`, and `gcc`, then download `nim-<version>-linux_x64.tar.xz` from nim-lang.org and verify the `.sha256` file.
+2. Selects `linux_x64` or `linux_arm64` from the native runner architecture.
+3. Prepends installation commands to `CIBW_BEFORE_ALL_LINUX` to install `xz`, `curl`, and `gcc`, download Nim, and verify its `.sha256` file.
+4. Runs any caller-provided `CIBW_BEFORE_ALL_LINUX` commands after Nim is available.
 
-**Linux aarch64 is not supported by this installer.** The archive name is always `linux_x64`.
+Linux aarch64 is tested on the native `ubuntu-24.04-arm` runner. Use a native
+runner matching the requested wheel architecture.
 
 ### Container images
 
-cibuildwheel chooses the manylinux image. You can override image names with the usual `CIBW_MANYLINUX_*` variables. That does not change the Nim architecture: it remains x86_64.
+cibuildwheel chooses the manylinux image. You can override image names with the
+usual `CIBW_MANYLINUX_*` variables; the Nim archive continues to match the
+runner architecture.
 
 ### Customizing Linux builds
 
-!!! warning
-    If you override `CIBW_BEFORE_ALL_LINUX`, Nim installation will be skipped.
-
-Use `CIBW_BEFORE_BUILD` instead:
+The action preserves `CIBW_BEFORE_ALL_LINUX` and runs it after installing Nim:
 
 ```yaml
 env:
-  CIBW_BEFORE_BUILD_LINUX: "nimble install cligen"
+  CIBW_BEFORE_ALL_LINUX: "nimble install cligen -y"
 ```
 
 ## macOS
@@ -48,13 +50,14 @@ steps:
 ## Windows
 
 - Installs the requested Nim version with Chocolatey
-- Installs MinGW so a C compiler is present
-- Adds `C:\tools\Nim\nim-<version>\bin` and MinGW to `PATH`
+- Uses the MinGW dependency installed by the Chocolatey Nim package
+- Adds `C:\tools\Nim\nim-<version>\bin` to `PATH`; Chocolatey supplies the compiler path
 
 Default generated projects statically link MinGW runtimes via nuwa-build (`windows-static-linking = true`).
 
 ## Environment variables
 
-Prefer `CIBW_BEFORE_BUILD_*` for extra setup. Do not replace `CIBW_BEFORE_ALL_LINUX` unless you install Nim yourself.
+Use the standard cibuildwheel hooks for extra setup. On Linux, a supplied
+`CIBW_BEFORE_ALL_LINUX` hook is appended after Nim installation.
 
 See [cibuildwheel settings](https://cibuildwheel.pypa.io/en/stable/options/) for `CIBW_BUILD`, `CIBW_SKIP`, and architecture flags.

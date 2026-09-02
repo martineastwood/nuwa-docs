@@ -20,8 +20,8 @@ https://github.com/martineastwood/featuristic/tree/nim
 git clone https://github.com/martineastwood/featuristic.git
 cd featuristic
 git checkout nim
-# Requires Nim on PATH, CPython 3.10+, and nuwa-build 0.5.1+
-pip install "nuwa-build>=0.5.1"
+# Requires Nim on PATH, CPython 3.10+, and nuwa-build 0.5.3+
+pip install "nuwa-build>=0.5.3"
 nuwa develop
 ```
 
