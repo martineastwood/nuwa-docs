@@ -42,7 +42,7 @@ PyPI Trusted Publishing is a secure way to publish without storing API tokens in
          - uses: actions/checkout@v4
 
          - name: Build wheels
-           uses: martineastwood/nuwa-build-action@v1
+           uses: martineastwood/nuwa-build-action@297c4d536f3e4154431dedac55593a96b6b84df2 # reviewed v1-compatible commit
 
          - uses: actions/upload-artifact@v4
            with:
@@ -199,7 +199,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build wheels
-        uses: martineastwood/nuwa-build-action@v1
+        uses: martineastwood/nuwa-build-action@297c4d536f3e4154431dedac55593a96b6b84df2 # reviewed v1-compatible commit
         with:
           nim-version: "2.2.10"
         env:

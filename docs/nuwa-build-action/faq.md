@@ -28,7 +28,7 @@ steps:
     if: runner.os == 'macOS'
 
   - name: Build wheels
-    uses: martineastwood/nuwa-build-action@v1
+    uses: martineastwood/nuwa-build-action@297c4d536f3e4154431dedac55593a96b6b84df2 # reviewed v1-compatible commit
 ```
 
 ### Where are the wheels stored?
@@ -119,7 +119,7 @@ The Chocolatey installation may need a refresh. Add a step to refresh environmen
   run: $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 - name: Build wheels
-  uses: martineastwood/nuwa-build-action@v1
+  uses: martineastwood/nuwa-build-action@297c4d536f3e4154431dedac55593a96b6b84df2 # reviewed v1-compatible commit
 ```
 
 ## Publishing
